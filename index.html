@@ -183,6 +183,29 @@
     .figura{transition:none}
   }
 </style>
+<!-- ─── Analítica de visitas (opcional, sin cookies y sin PII) ───────────────
+     GoatCounter: cuenta visitas, país/región, referidores, navegador y tamaño
+     de pantalla. No usa cookies, no guarda IPs y no perfila personas.
+     Para activarla:
+       1. Crea una cuenta gratuita en https://www.goatcounter.com/signup
+          y elige un código de sitio (minúsculas, números y guiones).
+       2. Pega ese código en ANALITICA_CODIGO (aquí abajo, entre las comillas).
+       3. El panel queda en https://<codigo>.goatcounter.com
+     Con ANALITICA_CODIGO vacío no se descarga ningún script: la página sigue
+     funcionando offline y desde file:// tal cual. -->
+<script>
+(function () {
+  var ANALITICA_CODIGO = "firststory"; // ← p. ej. "ryudmc-historia"
+  if (!ANALITICA_CODIGO) return;
+  if (location.protocol !== "http:" && location.protocol !== "https:") return;
+  var s = document.createElement("script");
+  s.async = true;
+  s.src = "https://gc.zgo.at/count.js";
+  s.setAttribute("data-goatcounter",
+                 "https://" + ANALITICA_CODIGO + ".goatcounter.com/count");
+  document.head.appendChild(s);
+})();
+</script>
 </head>
 <body>
 

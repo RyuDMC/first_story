@@ -8,4 +8,3 @@ python3 codes/generar_historia.py        # datos.json + datos.js
 python3 codes/generar_historia.py --og   # og.png (tarjeta social)
 ```
 
-No se editan a mano aquí: se regeneran en el repo fuente y se replican.
